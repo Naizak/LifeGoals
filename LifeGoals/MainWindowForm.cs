@@ -51,8 +51,19 @@ namespace LifeGoals
 
         private void btnCreateGoal_Click(object sender, EventArgs e)
         {
-            CreateGoalForm createGoalForm = new CreateGoalForm();
-            createGoalForm.ShowDialog();
+            panelMain.Visible = false;
+            panelCreateGoal.Visible = true;
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            panelCreateGoal.Visible = false;
+            panelMain.Visible = true;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            // Code to save the goal
         }
 
         private void btnToday306090_Click(object sender, EventArgs e)
