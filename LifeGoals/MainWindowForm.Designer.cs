@@ -71,6 +71,7 @@
             this.panelMain.Controls.Add(this.btnCreateGoal);
             this.panelMain.Controls.Add(this.btnToday306090);
             this.panelMain.Controls.Add(this.btnCategory);
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(0, 0);
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(800, 488);
@@ -163,7 +164,8 @@
             this.panelCreateGoal.Controls.Add(this.cmbCategory);
             this.panelCreateGoal.Controls.Add(this.btnSave);
             this.panelCreateGoal.Controls.Add(this.btnBack);
-            this.panelCreateGoal.Location = new System.Drawing.Point(0, 494);
+            this.panelCreateGoal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelCreateGoal.Location = new System.Drawing.Point(0, 0);
             this.panelCreateGoal.Name = "panelCreateGoal";
             this.panelCreateGoal.Size = new System.Drawing.Size(800, 488);
             this.panelCreateGoal.TabIndex = 6;
@@ -281,7 +283,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 487);
+            this.ClientSize = new System.Drawing.Size(800, 488);
             this.Controls.Add(this.panelCreateGoal);
             this.Controls.Add(this.panelMain);
             this.Name = "MainWindowForm";
