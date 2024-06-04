@@ -20,6 +20,7 @@
         private System.Windows.Forms.Button btnBackFromCategory;
         private System.Windows.Forms.Button btnSaveCategory;
         private System.Windows.Forms.Button btnBackFromCreateCategory;
+        private System.Windows.Forms.Button btnPickColor;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.TextBox txtTitle;
         private System.Windows.Forms.Label lblDescription;
@@ -38,6 +39,7 @@
         private System.Windows.Forms.Label lblRelevantGoals;
         private System.Windows.Forms.ListBox lstRelevantGoals;
         private System.Windows.Forms.Button btnDeleteCategory;
+        private System.Windows.Forms.ColorDialog colorDialog;
 
         protected override void Dispose(bool disposing)
         {
@@ -325,18 +327,19 @@
             panelCreateCategory = new System.Windows.Forms.Panel();
             lblCategoryName = new System.Windows.Forms.Label();
             txtCategoryName = new System.Windows.Forms.TextBox();
-            lblColorPicker = new System.Windows.Forms.Label();
             panelColorPicker = new System.Windows.Forms.Panel();
+            btnPickColor = new System.Windows.Forms.Button();
             lblRelevantGoals = new System.Windows.Forms.Label();
             lstRelevantGoals = new System.Windows.Forms.ListBox();
             btnSaveCategory = new System.Windows.Forms.Button();
             btnBackFromCreateCategory = new System.Windows.Forms.Button();
             btnDeleteCategory = new System.Windows.Forms.Button();
+            colorDialog = new System.Windows.Forms.ColorDialog();
 
             panelCreateCategory.Controls.Add(lblCategoryName);
             panelCreateCategory.Controls.Add(txtCategoryName);
-            panelCreateCategory.Controls.Add(lblColorPicker);
             panelCreateCategory.Controls.Add(panelColorPicker);
+            panelCreateCategory.Controls.Add(btnPickColor);
             panelCreateCategory.Controls.Add(lblRelevantGoals);
             panelCreateCategory.Controls.Add(lstRelevantGoals);
             panelCreateCategory.Controls.Add(btnSaveCategory);
@@ -362,27 +365,28 @@
             txtCategoryName.Size = new System.Drawing.Size(760, 31);
             txtCategoryName.TabIndex = 1;
 
-            lblColorPicker.AutoSize = true;
-            lblColorPicker.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            lblColorPicker.Location = new System.Drawing.Point(12, 120);
-            lblColorPicker.Name = "lblColorPicker";
-            lblColorPicker.Size = new System.Drawing.Size(138, 32);
-            lblColorPicker.TabIndex = 2;
-            lblColorPicker.Text = "Color Picker";
-
             panelColorPicker.BackColor = System.Drawing.Color.White;
             panelColorPicker.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             panelColorPicker.Location = new System.Drawing.Point(12, 155);
             panelColorPicker.Name = "panelColorPicker";
-            panelColorPicker.Size = new System.Drawing.Size(200, 200);
+            panelColorPicker.Size = new System.Drawing.Size(100, 100);
             panelColorPicker.TabIndex = 3;
+
+            btnPickColor.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnPickColor.Location = new System.Drawing.Point(120, 155);
+            btnPickColor.Name = "btnPickColor";
+            btnPickColor.Size = new System.Drawing.Size(100, 100);
+            btnPickColor.TabIndex = 4;
+            btnPickColor.Text = "Pick Color";
+            btnPickColor.UseVisualStyleBackColor = true;
+            btnPickColor.Click += new System.EventHandler(this.btnPickColor_Click);
 
             lblRelevantGoals.AutoSize = true;
             lblRelevantGoals.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             lblRelevantGoals.Location = new System.Drawing.Point(300, 120);
             lblRelevantGoals.Name = "lblRelevantGoals";
             lblRelevantGoals.Size = new System.Drawing.Size(173, 32);
-            lblRelevantGoals.TabIndex = 4;
+            lblRelevantGoals.TabIndex = 5;
             lblRelevantGoals.Text = "Relevant Goals";
 
             lstRelevantGoals.FormattingEnabled = true;
@@ -390,13 +394,13 @@
             lstRelevantGoals.Location = new System.Drawing.Point(300, 155);
             lstRelevantGoals.Name = "lstRelevantGoals";
             lstRelevantGoals.Size = new System.Drawing.Size(200, 204);
-            lstRelevantGoals.TabIndex = 5;
+            lstRelevantGoals.TabIndex = 6;
 
             btnSaveCategory.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             btnSaveCategory.Location = new System.Drawing.Point(550, 400);
             btnSaveCategory.Name = "btnSaveCategory";
             btnSaveCategory.Size = new System.Drawing.Size(110, 50);
-            btnSaveCategory.TabIndex = 6;
+            btnSaveCategory.TabIndex = 7;
             btnSaveCategory.Text = "Save";
             btnSaveCategory.UseVisualStyleBackColor = true;
             btnSaveCategory.Click += new System.EventHandler(this.btnSaveCategory_Click);
@@ -405,7 +409,7 @@
             btnBackFromCreateCategory.Location = new System.Drawing.Point(680, 400);
             btnBackFromCreateCategory.Name = "btnBackFromCreateCategory";
             btnBackFromCreateCategory.Size = new System.Drawing.Size(110, 50);
-            btnBackFromCreateCategory.TabIndex = 7;
+            btnBackFromCreateCategory.TabIndex = 8;
             btnBackFromCreateCategory.Text = "Back";
             btnBackFromCreateCategory.UseVisualStyleBackColor = true;
             btnBackFromCreateCategory.Click += new System.EventHandler(this.btnBackFromCreateCategory_Click);
@@ -414,7 +418,7 @@
             btnDeleteCategory.Location = new System.Drawing.Point(12, 400);
             btnDeleteCategory.Name = "btnDeleteCategory";
             btnDeleteCategory.Size = new System.Drawing.Size(110, 50);
-            btnDeleteCategory.TabIndex = 8;
+            btnDeleteCategory.TabIndex = 9;
             btnDeleteCategory.Text = "Delete";
             btnDeleteCategory.UseVisualStyleBackColor = true;
         }

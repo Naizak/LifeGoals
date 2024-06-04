@@ -106,6 +106,14 @@ namespace LifeGoals
             ShowCategoryPanel();
         }
 
+        private void btnPickColor_Click(object sender, EventArgs e)
+        {
+            if (colorDialog.ShowDialog() == DialogResult.OK)
+            {
+                panelColorPicker.BackColor = colorDialog.Color;
+            }
+        }
+
         private void ShowMainPanel()
         {
             panelMain.Visible = true;
